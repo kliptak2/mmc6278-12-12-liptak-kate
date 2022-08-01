@@ -26,7 +26,20 @@ class Word {
   }
 
   // implement the guessLetter function:
-  // guessLetter(letter) {}
+  guessLetter(letter) {
+    if(this.word.includes(letter)){
+      this.correctLetters.push(letter)
+    }
+    if (!this.word.includes(letter)){
+      this.incorrectLetters.push(letter)
+      this.remainingGuesses--
+    }
+  // Should add correct letter to correctLetters property, not incorrectLetters property
+  // Should update displayWord with correctly guessed letters
+  // Should add incorrect letter to incorrectLetters property, not correctLetters property
+  // Should decrement remainingGuesses when incorrectly guessing a letter
+  }
+
 
   // implement the updateScreen function:
   // updateScreen() {}
