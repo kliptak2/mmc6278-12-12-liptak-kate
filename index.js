@@ -33,7 +33,7 @@ class Word {
       for (var i = 0; i < wordToGuessIndivLettersArr.length; i++) {
         if (wordToGuessIndivLettersArr[i] == letter) {
           //alert(letter)
-          this.replaceUnderscoreAtIndex(i, letter);
+          this.replaceUnderscoreAtIndex(i, letter); // see helper function replaceUnderscoreAtIndex, below
         }
       }
     }
@@ -47,6 +47,7 @@ class Word {
     // Should decrement remainingGuesses when incorrectly guessing a letter
   }
 
+  // helper function
   replaceUnderscoreAtIndex(index, letter) {
     let replaceUnderscores = this.displayWord;
     if (index < this.displayWord.length) {
@@ -65,6 +66,11 @@ class Word {
     incorrectLettersEl.innerHTML = this.incorrectLetters;
     let wordToGuessEl = document.getElementById("word-to-guess");
     wordToGuessEl.innerHTML = this.displayWord;
+    let remainingGuessesEl = document.getElementById("remaining-guesses");
+    remainingGuessesEl.innerHTML = this.remainingGuesses;
+    // Should update #incorrect-letters with incorrectLetters
+    // Should update #word-to-guess with displayWord
+    // Should update #remaining-guesses with remainingGuesses
   }
 
   // implement the isGameOver function:
