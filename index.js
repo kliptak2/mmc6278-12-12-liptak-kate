@@ -74,7 +74,25 @@ class Word {
   }
 
   // implement the isGameOver function:
-  isGameOver() {}
+  isGameOver() {
+    let gameOver;
+    if (displayWord !== word && remainingGuesses > 0) {
+      gameOver = false;
+    }
+    if (displayWord === word && remainingGuesses > 0) {
+      gameOver = true;
+    }
+    if (displayWord !== word && remainingGuesses <= 0) {
+      gameOver = true;
+    }
+    if (displayWord === word && remainingGuesses <= 0) {
+      gameOver = true;
+    }
+    // Should return false if displayWord !== word and remainingGuesses > 0
+    // Should return true if displayWord === word and remainingGuesses > 0
+    // Should return true if displayWord !== word and remainingGuesses <= 0
+    // Should return true if displayWord === word and remainingGuesses <= 0
+  }
 
   // implement the getWinOrLoss function:
   getWinOrLoss() {}
