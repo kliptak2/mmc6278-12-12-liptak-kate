@@ -1,15 +1,15 @@
 const words = [
   "bananas",
-  // "grapes",
-  // "carousel",
-  // "milkshake",
-  // "javascript",
-  // "limousine",
-  // "chocolate",
-  // "programming",
-  // "meatloaf",
-  // "ukulele",
-  // "mango",
+  "grapes",
+  "carousel",
+  "milkshake",
+  "javascript",
+  "limousine",
+  "chocolate",
+  "programming",
+  "meatloaf",
+  "ukulele",
+  "mango",
 ];
 
 let wins = 0;
