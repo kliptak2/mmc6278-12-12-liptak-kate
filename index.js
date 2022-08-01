@@ -86,7 +86,18 @@ class Word {
   }
 
   // implement the getWinOrLoss function:
-  getWinOrLoss() {}
+  getWinOrLoss() {
+    if (this.displayWord === this.word && this.remainingGuesses > 0) {
+      return "win";
+    }
+    if (!currentWord.isGameOver() && this.remainingGuesses > 0) {
+      return null;
+    }
+    return "loss";
+
+    // Should return "win" if displayWord === word and remainingGuesses > 0
+    // Should return "loss" if remainingGuesses <= 0 and displayWord !== word
+  }
 }
 
 function newGame() {
