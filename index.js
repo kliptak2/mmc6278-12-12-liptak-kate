@@ -75,19 +75,10 @@ class Word {
 
   // implement the isGameOver function:
   isGameOver() {
-    let gameOver;
-    if (displayWord !== word && remainingGuesses > 0) {
-      gameOver = false;
+    if (this.displayWord !== this.word && this.remainingGuesses > 0) {
+      return false;
     }
-    if (displayWord === word && remainingGuesses > 0) {
-      gameOver = true;
-    }
-    if (displayWord !== word && remainingGuesses <= 0) {
-      gameOver = true;
-    }
-    if (displayWord === word && remainingGuesses <= 0) {
-      gameOver = true;
-    }
+    return true;
     // Should return false if displayWord !== word and remainingGuesses > 0
     // Should return true if displayWord === word and remainingGuesses > 0
     // Should return true if displayWord !== word and remainingGuesses <= 0
