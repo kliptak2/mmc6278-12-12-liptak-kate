@@ -33,7 +33,7 @@ class Word {
       for (var i = 0; i < wordToGuessIndivLettersArr.length; i++) {
         if (wordToGuessIndivLettersArr[i] == letter) {
           //alert(letter)
-          this.replaceUnderscoreAtIndex(i, letter); // see helper function replaceUnderscoreAtIndex, below
+          this.replaceUnderscoreAtIndex(i, letter); // replaceUnderscoreAtIndex is a helper function, see below
         }
       }
     }
@@ -62,15 +62,15 @@ class Word {
 
   // implement the updateScreen function:
   updateScreen() {
-    let incorrectLettersEl = document.getElementById("incorrect-letters");
-    incorrectLettersEl.innerHTML = this.incorrectLetters;
     let wordToGuessEl = document.getElementById("word-to-guess");
     wordToGuessEl.innerHTML = this.displayWord;
     let remainingGuessesEl = document.getElementById("remaining-guesses");
     remainingGuessesEl.innerHTML = this.remainingGuesses;
-    // Should update #incorrect-letters with incorrectLetters
+    let incorrectLettersEl = document.getElementById("incorrect-letters");
+    incorrectLettersEl.innerHTML = this.incorrectLetters;
     // Should update #word-to-guess with displayWord
     // Should update #remaining-guesses with remainingGuesses
+    // Should update #incorrect-letters with incorrectLetters
   }
 
   // implement the isGameOver function:
@@ -94,7 +94,7 @@ class Word {
       return null;
     }
     return "loss";
-
+    // Should return null if game is not over
     // Should return "win" if displayWord === word and remainingGuesses > 0
     // Should return "loss" if remainingGuesses <= 0 and displayWord !== word
   }
